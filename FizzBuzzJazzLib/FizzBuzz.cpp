@@ -3,11 +3,16 @@
 
 std::string FizzBuzz(int input)
 {
+    std::string result;
+
     if (input % 3 == 0)
-        return "Fizz";
-    else if (input % 5 == 0)
-        return "Buzz";
-    else if (input % 7 == 0)
-        return "Jazz";
-    return std::to_string(input);
+        result += "Fizz";
+    if (input % 5 == 0)
+        result += "Buzz";
+    if (input % 7 == 0)
+        result += "Jazz";
+    if(input % 3 != 0 && input % 5 != 0 && input % 7 != 0)
+        result = std::to_string(input);
+
+    return result;
 }
